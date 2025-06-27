@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap'); /* Import Google Fonts */
+
+/* Set base font size */
+html {
+    font-size: 16px;
+}
+
+/* Body styles: font, background color */
+body {
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    background-color: aquamarine;
+}
+
+/* Navigation bar styles */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    z-index: 1000;
+    margin-bottom: 2rem;
+}
+
+/* Navigation title alignment and spacing */
+nav .title {
+    text-align: center;
+    margin-right: 1rem;
+}
+
+/* Navigation list styles: horizontal layout */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 2rem;
+}
+
+/* Navigation list item flex settings */
+nav ul li {
+    flex: 0 1 auto;
+}
+
+/* Navigation links: font, color, transition */
+nav ul li a {
+    font-size: 2rem;
+    font-family: inherit;
+    color: black;
+    text-decoration: none;
+    transition: color 1s;
+}
+
+/* Navigation link hover effect */
+nav ul li a:hover {
+    color: blue;
+}
+
+/* Heading 1 styles */
+h1 {
+    font-size: 4rem;
+    text-align: center;
+    font-family: inherit;
+}
+
+/* Heading 2 styles */
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: inherit;
+}
+
+/* All divs: center content, column layout */
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Mission statement section: background image, color, height */
+#mission-statement {
+    background-image: url('images/gaming.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    height: 31.25rem;
+}
+
+/* Mission statement heading spacing */
+#mission-statement h2 {
+    margin-bottom: 5rem;
+}
+
+/* Games section: center content, column layout */
+#games {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Games list: horizontal layout, wrapping, spacing */
+#games ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+/* Game list items: column layout, fixed width */
+#games ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 15.625rem;
+}
+
+/* Image container: fixed height, center image */
+#games ul li .img-container {
+  width: 100%;
+  height: 7.8125rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Game images: responsive width */
+#games ul li img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Game title: spacing and alignment */
+#games ul li .game-title {
+  margin-top: 1rem;
+  text-align: center;
+}
