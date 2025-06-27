@@ -1,39 +1,110 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="script" src="script.js"></link>
-</html>
+    <link rel="stylesheet" href="./styles.css">
+</head>
 <body>
-    <header>
+    <!-- Skip-Link für Screenreader und Tastaturnutzer -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <header role="banner">
         <h1>Welcome to My Portfolio</h1>
-        <nav>
+        <nav role="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="#about">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#randomizer">Randomizer</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi! I'm Danny Krause and am a German developer. I am currently taking a course to be a Full-Stack Engineer.</p><br>
-        <p>I have a passion for coding and love to create web applications that solve real-world problems. My skills include HTML, CSS, JavaScript, Python, PHP and Java</p>
-        <p>In my free time, I enjoy playing video games, reading books, and watching anime.</p>
-        <p>Feel free to explore my projects and get in touch!</p>
-    </section>
+    <main id="main-content" role="main">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hi! I'm Danny Krause and am a German developer. I am currently taking a course to be a Full-Stack Engineer.</p>
+            <p>You can find my projects <a href="https://github.com/Scha7ten/">on my GitHub profile</a>. Most of them are private, but don't worry, there are more to come.</p>
+            <p>My skills include HTML, CSS, JavaScript, Python, PHP and Java.</p>
+            <p>Feel free to explore my projects and get in touch!</p>
+        </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <p>Here are some of my projects.</p>
-        <p>Mixed-Messages: A portfolio project from Codecademy about a random message generator. </p>
-    </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <table>
+                <caption>Übersicht meiner Projekte</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Project Name</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mixed-Messages</td>
+                        <td>A portfolio project from Codecademy about a random message generator.</td>
+                    </tr>
+                    <tr>
+                        <td>Portfolio-Website</td>
+                        <td>A portfolio project from Codecademy about creating a website showing off my portfolio. You are on it right now!</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can contact me via email at
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>PHP</li>
+                <li>Java</li>
+            </ul>
+        </section>
+
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>In my free time, I enjoy:</p>
+            <ul>
+                <li>Playing video games like:
+                    <ul>
+                        <li>League of Legends</li>
+                        <li>Minecraft</li>
+                        <li>Balatro</li>
+                        <li>Terraria</li>
+                        <li>Dark War: Survival</li>
+                    </ul>
+                </li>
+                <li>Reading books</li>
+                <li>Watching anime</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can contact me via email at <a href="mailto:scha7tenblut@gmail.com">scha7tenblut@gmail.com</a></p>
+        </section>
+
+        <section id="randomizer" aria-labelledby="randomizer-heading" role="region">
+            <h2 id="randomizer-heading">Randomizer (Shuffle Colors or Fonts)</h2>
+            <div aria-live="polite" aria-atomic="true" class="sr-only" id="notify-region">
+                <!-- Hier liest der Screenreader Statusmeldungen aus -->
+            </div>
+            <button id="disco-btn" aria-pressed="false" aria-label="Toggle disco mode">Start Disco Mode</button>
+            <button id="font-btn" aria-pressed="false" aria-label="Apply a random font">Random Font</button>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
+        <p>&copy; 2025 Danny Krause</p>
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
+</html>
